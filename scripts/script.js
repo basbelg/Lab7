@@ -16,3 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 });
+
+document.querySelector("img[src='settings.svg']").onclick = function() { router.setState("settings"); }
+window.addEventListener("popstate", function (ev) { router.setState(ev.state.page); });
